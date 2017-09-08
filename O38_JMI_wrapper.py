@@ -9,9 +9,9 @@ def JMI(data_file = 'trainData.csv', target_file = 'trainTargets.csv', hm_feat =
 
 
 if __name__ == "__main__":
-    data = sys.argv[1]
-    target = sys.argv[2]
-    hm_feat = int(sys.argv[3])
+    data = 'trainData.csv'
+    target = 'trainTargets.csv'
+    hm_feat = 12
     selected_feature = np.array(JMI(data, target, hm_feat), dtype=np.int16)
     np.savetxt('Features_O38_JMI.csv', selected_feature, delimiter=',')
     print selected_feature
